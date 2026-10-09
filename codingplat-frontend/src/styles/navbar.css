@@ -1,0 +1,679 @@
+/* =========================================================
+   CODINGPLAT
+   NAVBAR
+   ========================================================= */
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 64px;
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  background: var(--navbar);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  height: 100%;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  color: #ffffff;
+  opacity: 0.92;
+}
+
+
+/* =========================================================
+   NAV BUTTONS
+   ========================================================= */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   WELCOME TEXT
+   ========================================================= */
+
+.welcome-text {
+  margin-right: 10px;
+
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   NAV BUTTON
+   ========================================================= */
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid transparent;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.nav-button.active {
+  background: rgba(79, 70, 229, 0.18);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.nav-button[href="/login"] {
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+.nav-button[href="/login"]:hover {
+  border-color: #4b5563;
+  background: #1f2937;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+   ========================================================= */
+
+.nav-button[href="/register"] {
+  border-color: var(--primary);
+
+  background: var(--primary);
+  color: #ffffff;
+
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.18);
+}
+
+.nav-button[href="/register"]:hover {
+  border-color: var(--primary-hover);
+
+  background: var(--primary-hover);
+  color: #ffffff;
+
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+   ========================================================= */
+
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid #374151;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.logout-button:hover {
+  border-color: #4b5563;
+  background: #1f2937;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   PROFILE CONTAINER
+   ========================================================= */
+
+.profile-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+
+/* =========================================================
+   PROFILE BUTTON
+   ========================================================= */
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  min-width: 34px;
+  min-height: 34px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid #374151;
+  border-radius: 50%;
+
+  background: #1f2937;
+  color: #ffffff;
+
+  line-height: 0;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.profile-button:hover {
+  background: #374151;
+
+  border-color: #4b5563;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+
+  transform: translateY(-1px);
+}
+
+.profile-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   PROFILE AVATAR
+   ========================================================= */
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #e5e7eb;
+
+  line-height: 0;
+}
+
+.profile-avatar svg {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  max-width: 18px;
+  max-height: 18px;
+
+  margin: 0;
+  padding: 0;
+
+  stroke: currentColor;
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+   ========================================================= */
+
+.profile-dropdown {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  right: 0;
+
+  width: 250px;
+
+  padding: 8px;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: var(--text);
+
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.14),
+    0 2px 8px rgba(15, 23, 42, 0.08);
+
+  z-index: 1000;
+
+  animation: profileDropdownIn 0.15s ease-out;
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN ANIMATION
+   ========================================================= */
+
+@keyframes profileDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+   ========================================================= */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 11px 10px;
+}
+
+
+/* =========================================================
+   LARGE PROFILE AVATAR
+   ========================================================= */
+
+.profile-avatar-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.profile-avatar-large svg {
+  display: block;
+
+  width: 21px;
+  height: 21px;
+
+  stroke: currentColor;
+}
+
+
+/* =========================================================
+   PROFILE USER INFORMATION
+   ========================================================= */
+
+.profile-user-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 3px;
+}
+
+.profile-user-info strong {
+  overflow: hidden;
+
+  color: var(--text-dark);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-user-info span {
+  overflow: hidden;
+
+  color: var(--text-muted);
+
+  font-size: 11px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROFILE DIVIDER
+   ========================================================= */
+
+.profile-divider {
+  height: 1px;
+
+  margin: 6px 4px;
+
+  background: var(--border-light);
+}
+
+
+/* =========================================================
+   PROFILE MENU ITEM
+   ========================================================= */
+
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 38px;
+
+  gap: 10px;
+
+  padding: 8px 10px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: var(--text);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.profile-menu-item:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   PROFILE MENU ICON
+   ========================================================= */
+
+.profile-menu-item > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+
+  flex-shrink: 0;
+
+  font-size: 15px;
+}
+
+.profile-menu-item > span:last-child {
+  flex: 1;
+}
+
+
+/* =========================================================
+   LOGOUT MENU ITEM
+   ========================================================= */
+
+.profile-menu-item.logout-item {
+  color: var(--danger);
+}
+
+.profile-menu-item.logout-item:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .welcome-text {
+    display: none;
+  }
+
+  .nav-buttons {
+    gap: 6px;
+  }
+
+  .nav-button {
+    height: 33px;
+    padding: 0 11px;
+  }
+
+  .logout-button {
+    height: 33px;
+    padding: 0 11px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 58px;
+    min-height: 58px;
+
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-buttons {
+    gap: 4px;
+  }
+
+  .nav-button {
+    height: 32px;
+
+    padding: 0 9px;
+
+    font-size: 12px;
+  }
+
+  .logout-button {
+    height: 32px;
+
+    padding: 0 9px;
+
+    font-size: 12px;
+  }
+
+  .profile-button {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+    min-height: 34px;
+  }
+
+  .profile-avatar svg {
+    width: 17px;
+    height: 17px;
+
+    max-width: 17px;
+    max-height: 17px;
+  }
+
+  .profile-dropdown {
+    right: -5px;
+    width: 235px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .nav-buttons {
+    gap: 3px;
+  }
+
+  .nav-button {
+    height: 31px;
+
+    padding: 0 7px;
+
+    font-size: 11px;
+  }
+
+  .logout-button {
+    height: 31px;
+
+    padding: 0 7px;
+
+    font-size: 11px;
+  }
+
+  .profile-button {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  .profile-avatar svg {
+    width: 16px;
+    height: 16px;
+
+    max-width: 16px;
+    max-height: 16px;
+  }
+
+  .profile-dropdown {
+    right: -4px;
+    width: 220px;
+  }
+}

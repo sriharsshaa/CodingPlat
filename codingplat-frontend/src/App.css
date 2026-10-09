@@ -1,0 +1,122 @@
+/* Appearance menu */
+.appearance-current {
+margin-left: auto;
+font-size: 12px;
+color: #888;
+}
+
+.appearance-options {
+padding: 6px 10px 10px;
+border-top: 1px solid var(--border-color, #e5e7eb);
+}
+
+.appearance-option {
+display: flex;
+align-items: center;
+gap: 10px;
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 8px;
+background: transparent;
+color: inherit;
+text-align: left;
+cursor: pointer;
+}
+
+.appearance-option span:last-child {
+margin-left: auto;
+}
+
+.appearance-option:hover,
+.appearance-option.active {
+background: var(--hover-bg, #f1efff);
+}
+
+/* Theme foundation */
+html[data-theme="light"] {
+color-scheme: light;
+--page-bg: #f8f9fc;
+--surface-bg: #ffffff;
+--text-color: #202333;
+--muted-color: #6b7280;
+--border-color: #e5e7eb;
+--hover-bg: #f1efff;
+}
+
+html[data-theme="dark"] {
+color-scheme: dark;
+--page-bg: #111318;
+--surface-bg: #1b1e27;
+--text-color: #edf0f7;
+--muted-color: #a3a9b8;
+--border-color: #343845;
+--hover-bg: #29283b;
+}
+
+html,
+body,
+#root {
+min-height: 100%;
+}
+
+html[data-theme="light"] body,
+html[data-theme="dark"] body {
+background: var(--page-bg);
+color: var(--text-color);
+}
+
+html[data-theme="light"] .app,
+html[data-theme="dark"] .app {
+min-height: 100vh;
+background: var(--page-bg);
+color: var(--text-color);
+}
+
+/* Shared surfaces */
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .profile-dropdown,
+html[data-theme="dark"] .problem-card,
+html[data-theme="dark"] .problem-description-panel,
+html[data-theme="dark"] .code-section,
+html[data-theme="dark"] .testcase-section,
+html[data-theme="dark"] .submission-details-page,
+html[data-theme="dark"] .submission-performance-card,
+html[data-theme="dark"] .submission-card,
+html[data-theme="dark"] .submission-result-content,
+html[data-theme="dark"] .problem-tab-content,
+html[data-theme="dark"] .problem-submissions-content {
+background-color: var(--surface-bg);
+color: var(--text-color);
+border-color: var(--border-color);
+}
+
+/* Text and form controls */
+html[data-theme="dark"] .problems-subtitle,
+html[data-theme="dark"] .problem-description,
+html[data-theme="dark"] .profile-user-info span,
+html[data-theme="dark"] .submission-author p {
+color: var(--muted-color);
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+background: #20232d;
+color: var(--text-color);
+border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .problem-tab,
+html[data-theme="dark"] .difficulty-filter,
+html[data-theme="dark"] .tag-filter,
+html[data-theme="dark"] .profile-menu-item {
+color: var(--text-color);
+}
+
+html[data-theme="dark"] .problem-tab:hover,
+html[data-theme="dark"] .difficulty-filter:hover,
+html[data-theme="dark"] .tag-filter:hover,
+html[data-theme="dark"] .profile-menu-item:hover {
+background: var(--hover-bg);
+}
